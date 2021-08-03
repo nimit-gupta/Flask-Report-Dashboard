@@ -1,0 +1,27 @@
+<!doctype html>
+<head></head>
+<body>
+    <p>Bookmarked URLs</p>
+    <div>
+        {% block content %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{row['id']}}</td>
+                    <td>{{row['url_text']}}</td>
+                    <td>{{row['entry_date']}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% endblock %}
+    </div>
+</body>

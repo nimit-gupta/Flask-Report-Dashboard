@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">   
+</head>
+<body>
+    <form action="{{ url_for('datepicker')}}" method="POST"> 
+	   <div class="form-group">
+            <div class="row" style = "margin-left:30%;column-gap: 10px; margin-top:8%">
+                <div class = "column">
+                        <input type="date" id="start" name="DATE"
+                         value="2021-01-01"
+                         min="2021-01-01" 
+                         max="2021-12-31">
+                </div>
+                <div class = "column">
+                    <select name="SOURCE" id="source-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="StackOverflow">StackOverflow</option>
+                        <option value="GitHub">GitHUB</option>
+                        <option value="GeekforGeeks">GeekforGeeks</option>
+                        <option value="ProgramCreek">ProgramCreek</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+                <div class="column">
+                    <a href = "{{url_for('datepicker2')}}" class="btn btn-primary">Download Link</a> 
+                </div>
+                <div class="column">
+                    <a href = "{{url_for('datepicker3')}}" class="btn btn-primary">Show Graph</a>  
+                </div>
+              </div>
+		</form>
+    <br></br>  
+</body>
